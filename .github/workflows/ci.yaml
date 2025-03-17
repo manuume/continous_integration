@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4  # Updated to latest version
+      uses: actions/checkout@v4  # Updated version
 
     - name: Set up Python
-      uses: actions/setup-python@v4  # Updated to latest version
+      uses: actions/setup-python@v4
       with:
         python-version: '3.9'
 
@@ -27,7 +27,7 @@ jobs:
         pip install pytest streamlit
 
     - name: Debug File Structure
-      run: ls -R  # Debugging to check if test files exist
+      run: ls -R  # Verify test files exist
 
     - name: Run tests
-      run: pytest  # Running pytest without specifying a file
+      run: pytest  # Let pytest discover tests automatically
